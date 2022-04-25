@@ -6,7 +6,7 @@ Manage academic citations
 
 Sphinx can work with BibTeX files, see `<https://sphinxcontrib-bibtex.readthedocs.io/en/latest/>`_.
 
-.. _citations:
+.. _citation_github:
 
 Encouraging citations to your work
 ----------------------------------

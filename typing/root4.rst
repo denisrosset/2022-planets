@@ -8,6 +8,14 @@ Then those dicts can be automatically documented in the Sphinx-generated website
 
 This is particularly important if those dicts describe serialized data (for example in pickles).
 
+Advantages of typed dicts:
+
+* We know what key/value pairs they contain
+
+* We document the types of the values
+
+* We can add a documentation string to explain what those key/value pairs are
+
 Example Sphinx autodoc output
 -----------------------------
 
