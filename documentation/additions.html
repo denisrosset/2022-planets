@@ -1,0 +1,555 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Additions &#8212; Modern scientific Python tooling</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Specifying dependencies and publishing code" href="../publishing/index.html" />
+    <link rel="prev" title="Level 2 (or 3?): documenting the code using Sphinx" href="level2.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Modern scientific Python tooling</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../challenges.html">
+   Challenges of academic code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../principles.html">
+   Goals and principles in this talk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../levels.html">
+   Code levels
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ide/index.html">
+   Integrated development environments
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/installation.html">
+     Installing VS Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/extensions.html">
+     Install extensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/settings.html">
+     How are settings managed
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ide/setup/index.html">
+     Setting up VS Code
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/appearance.html">
+       Appearance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/telemetry.html">
+       Telemetry and user experiments
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/spellcheck.html">
+       Spell checking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/environment.html">
+       Python environment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/extras.html">
+     Additional extensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/shortcuts.html">
+     Keyboard shortcuts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../formatting/index.html">
+   Code formatting
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../formatting/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../formatting/level1.html">
+     Level 1: Formatting defaults for all your projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../formatting/level2.html">
+     Level 2: Formatting project by project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../formatting/level3.html">
+     Additional formatting/linting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../formatting/regions.html">
+     Source code regions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../typing/index.html">
+   Typing and modularizing code
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root0.html">
+     Root-finding solver based on Brent’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root1.html">
+     First step: making a Python script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root2.html">
+     Second step: script to module
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root3.html">
+     Third step: breaking the code into functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root4.html">
+     Fourth step: breaking the data into dicts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root5.html">
+     Fifth step: dataclasses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root5_nodoc.html">
+     Fifth step without comments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/tricky.html">
+     Tricky parts of type annotations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../testing/index.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Documenting published code
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="level1.html">
+     Level 1: documenting the code using a paper + Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="level2.html">
+     Level 2 (or 3?): documenting the code using Sphinx
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Additions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../publishing/index.html">
+   Specifying dependencies and publishing code
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/python_versions.html">
+     Python versions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/level1.html">
+     Level 1: requirements.txt, “clone the repo” deployment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/level2.html">
+     Level 2: Use Poetry and Python virtual environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/modules.html">
+     Python modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/level3.html">
+     Level 3: Manage compatibility guarantees
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/tricky.html">
+     Tricky parts
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/documentation/additions.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+            <div class="tocsection onthispage pt-5 pb-3">
+                <i class="fas fa-list"></i> Contents
+            </div>
+            <nav id="bd-toc-nav" aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manage-academic-citations">
+   Manage academic citations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encouraging-citations-to-your-work">
+   Encouraging citations to your work
+  </a>
+ </li>
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Additions</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                        <div>
+                            <h2> Contents </h2>
+                        </div>
+                        <nav aria-label="Page">
+                            <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#manage-academic-citations">
+   Manage academic citations
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#encouraging-citations-to-your-work">
+   Encouraging citations to your work
+  </a>
+ </li>
+</ul>
+
+                        </nav>
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="additions">
+<h1>Additions<a class="headerlink" href="#additions" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="manage-academic-citations">
+<h2>Manage academic citations<a class="headerlink" href="#manage-academic-citations" title="Permalink to this headline">¶</a></h2>
+<p>Sphinx can work with BibTeX files, see <a class="reference external" href="https://sphinxcontrib-bibtex.readthedocs.io/en/latest/">https://sphinxcontrib-bibtex.readthedocs.io/en/latest/</a>.</p>
+</div>
+<div class="section" id="encouraging-citations-to-your-work">
+<span id="citation-github"></span><h2>Encouraging citations to your work<a class="headerlink" href="#encouraging-citations-to-your-work" title="Permalink to this headline">¶</a></h2>
+<p>Add a <code class="docutils literal notranslate"><span class="pre">CITATION.cff</span></code> file in your GitHub repository, see
+<a class="reference external" href="https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-citation-files">CITATION files</a>
+for details.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="nt">cff-version</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">1.2.0</span><span class="w"></span>
+<span class="nt">message</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;If</span><span class="nv"> </span><span class="s">you</span><span class="nv"> </span><span class="s">use</span><span class="nv"> </span><span class="s">this</span><span class="nv"> </span><span class="s">software,</span><span class="nv"> </span><span class="s">please</span><span class="nv"> </span><span class="s">cite</span><span class="nv"> </span><span class="s">it</span><span class="nv"> </span><span class="s">as</span><span class="nv"> </span><span class="s">below.&quot;</span><span class="w"></span>
+<span class="nt">authors</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Rosset&quot;</span><span class="w"></span>
+<span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Denis&quot;</span><span class="w"></span>
+<span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0003-0444-7558&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Bancal&quot;</span><span class="w"></span>
+<span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Jean-Daniel&quot;</span><span class="w"></span>
+<span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0002-9630-0993&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">name</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RepLAB</span><span class="nv"> </span><span class="s">contributors&quot;</span><span class="w"></span>
+<span class="nt">website</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://github.com/replab/replab/graphs/contributors&quot;</span><span class="w"></span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RepLAB&quot;</span><span class="w"></span>
+<span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://replab.github.io/replab&quot;</span><span class="w"></span>
+<span class="nt">preferred-citation</span><span class="p">:</span><span class="w"></span>
+<span class="nt">type</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">conference</span><span class="w"></span>
+<span class="nt">authors</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Rosset&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Denis&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0003-0444-7558&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Montealegre-Mora&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Felipe&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Bancal&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Jean-Daniel&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0002-9630-0993&quot;</span><span class="w"></span>
+<span class="nt">doi</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;10.1007/978-3-030-55777-5_60&quot;</span><span class="w"></span>
+<span class="nt">title</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;RepLAB:</span><span class="nv"> </span><span class="s">A</span><span class="nv"> </span><span class="s">Computational/Numerical</span><span class="nv"> </span><span class="s">Approach</span><span class="nv"> </span><span class="s">to</span><span class="nv"> </span><span class="s">Representation</span><span class="nv"> </span><span class="s">Theory&quot;</span><span class="w"></span>
+<span class="nt">journal</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Quantum</span><span class="nv"> </span><span class="s">Theory</span><span class="nv"> </span><span class="s">and</span><span class="nv"> </span><span class="s">Symmetries</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">CRM</span><span class="nv"> </span><span class="s">Series</span><span class="nv"> </span><span class="s">in</span><span class="nv"> </span><span class="s">Mathematical</span><span class="nv"> </span><span class="s">Physics,</span><span class="nv"> </span><span class="s">Proceedings</span><span class="nv"> </span><span class="s">of</span><span class="nv"> </span><span class="s">the</span><span class="nv"> </span><span class="s">11th</span><span class="nv"> </span><span class="s">International</span><span class="nv"> </span><span class="s">Symposium,</span><span class="nv"> </span><span class="s">Montreal,</span><span class="nv"> </span><span class="s">Canada&quot;</span><span class="w"></span>
+<span class="nt">editors</span><span class="p">:</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Paranjape&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Manu</span><span class="nv"> </span><span class="s">B.&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;MacKenzie&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Richard&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Thomova&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Zora&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Winternitz&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Pavel&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;https://orcid.org/0000-0003-1671-1213&quot;</span><span class="w"></span>
+<span class="p p-Indicator">-</span><span class="w"> </span><span class="nt">family-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Witczak-Krempa&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">given-names</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;William&quot;</span><span class="w"></span>
+<span class="w">    </span><span class="nt">orcid</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;</span><span class="nv"> </span><span class="s">https://orcid.org/0000-0003-2350-2583&quot;</span><span class="w"></span>
+<span class="nt">publisher</span><span class="p">:</span><span class="w"> </span><span class="s">&quot;Springer&quot;</span><span class="w"></span>
+<span class="nt">start</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">643</span><span class="w"></span>
+<span class="nt">end</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">653</span><span class="w"></span>
+<span class="nt">year</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">2021</span><span class="w"></span>
+<span class="nt">month</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">3</span><span class="w"></span>
+<span class="nt">url</span><span class="p">:</span><span class="w"> </span><span class="l l-Scalar l-Scalar-Plain">https://link.springer.com/chapter/10.1007%2F978-3-030-55777-5_60</span><span class="w"></span>
+</pre></div>
+</div>
+</div>
+</div>
+
+
+              </div>
+              
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Denis Rosset<br/>
+    
+        &copy; Copyright 2022, Denis Rosset.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>

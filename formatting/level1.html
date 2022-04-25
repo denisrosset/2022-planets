@@ -1,0 +1,487 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Level 1: Formatting defaults for all your projects &#8212; Modern scientific Python tooling</title>
+    
+  <link href="../_static/css/theme.css" rel="stylesheet">
+  <link href="../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
+
+    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
+    
+      
+
+    
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-book-theme.css?digest=84ace793992934648b4de8eed757e5a2" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.css" />
+    
+  <link rel="preload" as="script" href="../_static/js/index.be7d3bbb2ef33a8344ce.js">
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown, .tag_hide_input div.cell_input, .tag_hide-input div.cell_input, .tag_hide_output div.cell_output, .tag_hide-output div.cell_output, .tag_hide_cell.cell, .tag_hide-cell.cell';</script>
+    <script src="../_static/sphinx-book-theme.9d8b4a8b9bb19db25eeaddc40d639ba2.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Level 2: Formatting project by project" href="level2.html" />
+    <link rel="prev" title="Code formatting" href="index.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+<!-- Checkboxes to toggle the left sidebar -->
+<input type="checkbox" class="sidebar-toggle" name="__navigation" id="__navigation" aria-label="Toggle navigation sidebar">
+<label class="overlay" for="__navigation">
+    <div class="visually-hidden">Toggle navigation sidebar</div>
+</label>
+<div class="col-12 col-md-3 bd-sidebar site-navigation " id="site-navigation">
+    
+        <div class="navbar-brand-box">
+    <a class="navbar-brand text-wrap" href="../index.html">
+      
+      
+      
+      <h1 class="site-logo" id="site-title">Modern scientific Python tooling</h1>
+      
+    </a>
+</div><form class="bd-search d-flex align-items-center" action="../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item active">
+        <ul class="current nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="../challenges.html">
+   Challenges of academic code
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../principles.html">
+   Goals and principles in this talk
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../levels.html">
+   Code levels
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../ide/index.html">
+   Integrated development environments
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/>
+  <label for="toctree-checkbox-1">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/installation.html">
+     Installing VS Code
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/extensions.html">
+     Install extensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/settings.html">
+     How are settings managed
+    </a>
+   </li>
+   <li class="toctree-l2 has-children">
+    <a class="reference internal" href="../ide/setup/index.html">
+     Setting up VS Code
+    </a>
+    <input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/>
+    <label for="toctree-checkbox-2">
+     <i class="fas fa-chevron-down">
+     </i>
+    </label>
+    <ul>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/appearance.html">
+       Appearance
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/telemetry.html">
+       Telemetry and user experiments
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/spellcheck.html">
+       Spell checking
+      </a>
+     </li>
+     <li class="toctree-l3">
+      <a class="reference internal" href="../ide/setup/environment.html">
+       Python environment
+      </a>
+     </li>
+    </ul>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/extras.html">
+     Additional extensions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../ide/shortcuts.html">
+     Keyboard shortcuts
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 current active has-children">
+  <a class="reference internal" href="index.html">
+   Code formatting
+  </a>
+  <input checked="" class="toctree-checkbox" id="toctree-checkbox-3" name="toctree-checkbox-3" type="checkbox"/>
+  <label for="toctree-checkbox-3">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul class="current">
+   <li class="toctree-l2">
+    <a class="reference internal" href="index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2 current active">
+    <a class="current reference internal" href="#">
+     Level 1: Formatting defaults for all your projects
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="level2.html">
+     Level 2: Formatting project by project
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="level3.html">
+     Additional formatting/linting
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="regions.html">
+     Source code regions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../typing/index.html">
+   Typing and modularizing code
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-4" name="toctree-checkbox-4" type="checkbox"/>
+  <label for="toctree-checkbox-4">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root0.html">
+     Root-finding solver based on Brent’s method
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root1.html">
+     First step: making a Python script
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root2.html">
+     Second step: script to module
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root3.html">
+     Third step: breaking the code into functions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root4.html">
+     Fourth step: breaking the data into dicts
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root5.html">
+     Fifth step: dataclasses
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/root5_nodoc.html">
+     Fifth step without comments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../typing/tricky.html">
+     Tricky parts of type annotations
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="../testing/index.html">
+   Testing
+  </a>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../documentation/index.html">
+   Documenting published code
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-5" name="toctree-checkbox-5" type="checkbox"/>
+  <label for="toctree-checkbox-5">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../documentation/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../documentation/level1.html">
+     Level 1: documenting the code using a paper + Jupyter notebooks
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../documentation/level2.html">
+     Level 2 (or 3?): documenting the code using Sphinx
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../documentation/additions.html">
+     Additions
+    </a>
+   </li>
+  </ul>
+ </li>
+ <li class="toctree-l1 has-children">
+  <a class="reference internal" href="../publishing/index.html">
+   Specifying dependencies and publishing code
+  </a>
+  <input class="toctree-checkbox" id="toctree-checkbox-6" name="toctree-checkbox-6" type="checkbox"/>
+  <label for="toctree-checkbox-6">
+   <i class="fas fa-chevron-down">
+   </i>
+  </label>
+  <ul>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/index.html">
+     Index
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/python_versions.html">
+     Python versions
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/level1.html">
+     Level 1: requirements.txt, “clone the repo” deployment
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/level2.html">
+     Level 2: Use Poetry and Python virtual environments
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/modules.html">
+     Python modules
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/level3.html">
+     Level 3: Manage compatibility guarantees
+    </a>
+   </li>
+   <li class="toctree-l2">
+    <a class="reference internal" href="../publishing/tricky.html">
+     Tricky parts
+    </a>
+   </li>
+  </ul>
+ </li>
+</ul>
+
+    </div>
+</nav> <!-- To handle the deprecated key -->
+
+<div class="navbar_extra_footer">
+  Theme by the <a href="https://ebp.jupyterbook.org">Executable Book Project</a>
+</div>
+
+</div>
+
+
+          
+
+
+          
+<!-- This is an invisible pixel that we watch to see if we've scrolled. -->
+<div class="sbt-scroll-pixel-helper"></div>
+<main class="col py-md-3 pl-md-4 bd-content overflow-auto" role="main">
+    
+    <div class="topbar container-xl fixed-top">
+    <div class="topbar-contents row">
+        <div class="col-12 col-md-3 bd-topbar-whitespace site-navigation show"></div>
+        <div class="col pl-md-4 topbar-main">
+            <div class="topbar-left">
+                
+                <label class="nav-toggle-button" for="__navigation">
+                    <div class="visually-hidden">Toggle navigation</div>
+                    <i class="fas fa-bars"></i>
+                </label>
+                
+            </div>
+            
+<div class="dropdown-buttons-trigger">
+    <button id="dropdown-buttons-trigger" class="btn btn-secondary topbarbtn" aria-label="Download this page"><i
+            class="fas fa-download"></i></button>
+
+    <div class="dropdown-buttons">
+        <!-- ipynb file if we had a myst markdown file -->
+        
+        <!-- Download raw file -->
+        <a class="dropdown-buttons" href="../_sources/formatting/level1.rst.txt"><button type="button"
+                class="btn btn-secondary topbarbtn" title="Download source file" data-toggle="tooltip"
+                data-placement="left">.rst</button></a>
+        <!-- Download PDF via print -->
+        <button type="button" id="download-print" class="btn btn-secondary topbarbtn" title="Print to PDF"
+                onclick="printPdf(this)" data-toggle="tooltip" data-placement="left">.pdf</button>
+    </div>
+</div>
+
+            <!-- Source interaction buttons -->
+
+            <!-- Full screen (wrap in <a> to have style consistency -->
+
+<a class="full-screen-button"><button type="button" class="btn btn-secondary topbarbtn" data-toggle="tooltip"
+        data-placement="bottom" onclick="toggleFullScreen()" aria-label="Fullscreen mode"
+        title="Fullscreen mode"><i
+            class="fas fa-expand"></i></button></a>
+
+            <!-- Launch buttons -->
+
+        </div>
+
+        <!-- Table of contents -->
+        <div class="d-none d-md-block col-md-2 bd-toc show noprint">
+            
+        </div>
+    </div>
+</div>
+    <div id="main-content" class="row">
+        <div class="col-12 col-md-9 pl-md-3 pr-md-0">
+            <!-- Table of contents that is only displayed when printing the page -->
+            <div id="jb-print-docs-body" class="onlyprint">
+                <h1>Level 1: Formatting defaults for all your projects</h1>
+                <!-- Table of contents -->
+                <div id="print-main-content">
+                    <div id="jb-print-toc">
+                        
+                    </div>
+                </div>
+            </div>
+            
+              <div>
+                
+  <div class="section" id="level-1-formatting-defaults-for-all-your-projects">
+<h1>Level 1: Formatting defaults for all your projects<a class="headerlink" href="#level-1-formatting-defaults-for-all-your-projects" title="Permalink to this headline">¶</a></h1>
+<p>Install the required tools in your Python or Conda environment. Note that <code class="docutils literal notranslate"><span class="pre">isort</span></code> and
+<code class="docutils literal notranslate"><span class="pre">black</span></code> have minimal dependencies and should not break your setup.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">isort</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">black</span>
+</pre></div>
+</div>
+<p>In the user <code class="docutils literal notranslate"><span class="pre">settings.json</span></code> (see <a class="reference internal" href="../ide/settings.html#settings"><span class="std std-ref">How are settings managed</span></a>), add:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;editor.rulers&quot;</span><span class="p">:</span> <span class="p">[</span><span class="mi">99</span><span class="p">],</span>
+<span class="s2">&quot;editor.formatOnSave&quot;</span><span class="p">:</span> <span class="n">true</span><span class="p">,</span>
+<span class="s2">&quot;python.formatting.provider&quot;</span><span class="p">:</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+<span class="s2">&quot;python.formatting.blackArgs&quot;</span><span class="p">:</span> <span class="p">[</span><span class="s2">&quot;--line-length=99&quot;</span><span class="p">],</span>
+<span class="s2">&quot;python.sortImports.args&quot;</span><span class="p">:</span> <span class="p">[</span>
+    <span class="s2">&quot;--profile&quot;</span><span class="p">,</span> <span class="s2">&quot;black&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;--line-length&quot;</span><span class="p">,</span> <span class="s2">&quot;99&quot;</span>
+<span class="p">],</span>
+<span class="s2">&quot;[python]&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="s2">&quot;editor.codeActionsOnSave&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s2">&quot;source.organizeImports&quot;</span><span class="p">:</span> <span class="n">true</span>
+    <span class="p">}</span>
+<span class="p">},</span>
+</pre></div>
+</div>
+<p>This will provide defaults for all the Python projects you edit. Replace <code class="docutils literal notranslate"><span class="pre">99</span></code> by your prefered
+line length.</p>
+<p>Skip the <code class="docutils literal notranslate"><span class="pre">editor.rulers</span></code> setting if you do not want an indication of the line length in the
+editor.</p>
+</div>
+
+
+              </div>
+              
+            
+        </div>
+    </div>
+    <footer class="footer">
+  <p>
+    
+      By Denis Rosset<br/>
+    
+        &copy; Copyright 2022, Denis Rosset.<br/>
+  </p>
+</footer>
+</main>
+
+
+      </div>
+    </div>
+  
+  <script src="../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
+
+  </body>
+</html>
