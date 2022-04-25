@@ -14,3 +14,5 @@ Good practices in Python and how to publish code online
     testing/index
     documentation/index
     publishing/index
+    references
+    
