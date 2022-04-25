@@ -30,7 +30,7 @@ environments.
 You can set `virtualenvs.in-project <https://python-poetry.org/docs/configuration/#virtualenvsin-project>`_
 to ``true`` to perform this step automatically. Run in the shell::
 
-  poetry config settings.virtualenvs.in-project true
+  poetry config virtualenvs.in-project true
 
 Initialize the Poetry configuration
 -----------------------------------
