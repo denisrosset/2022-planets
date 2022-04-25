@@ -9,14 +9,13 @@ Great general resource:
 
 * `<https://realpython.com/>`_
 
-
-
 General typing resources:
 
 * `<https://github.com/typeddjango/awesome-python-typing>`_
 * `<https://github.com/ramonhagenaars/nptyping>`_
 * `<https://github.com/beartype/beartype>`_
 * `<https://github.com/agronholm/typeguard/>`_
+* `<https://github.com/Instagram/MonkeyType>`_
 
 Publishing using Poetry:
 
