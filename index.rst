@@ -7,8 +7,10 @@ Good practices in Python and how to publish code online
     
     challenges
     principles
+    levels
     ide/index
     formatting/index
     typing/index
+    testing/index
     documentation/index
     publishing/index

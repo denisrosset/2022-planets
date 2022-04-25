@@ -5,7 +5,7 @@ For smaller projects, the documentation can be perfectly split between:
 
 - An academic paper that provide a high-level description of the algorithm, its inputs and outputs.
 
-  See :ref:`_citation_github` to emphasize citation of your work.
+  See :ref:`citation_github` to emphasize citation of your work.
 
 - A few Jupyter notebooks providing example runs.
 
